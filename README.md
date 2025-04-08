@@ -23,8 +23,9 @@ It then calculates the overtime value
 3. Navigate to the folder where your script is located.
 4. Run:
 
-```bash
 python overtime_calculator.py
+
+
 
 🧠 Option 2: Run in PyCharm
 Open PyCharm.
@@ -37,6 +38,8 @@ Paste in the code from the script.
 
 Click the green ▶️ "Run" button at the top or right-click on the file and choose "Run".
 
+
+
 🌐 Option 3: Run Online with OneCompiler
 Go to OneCompiler Python
 
@@ -47,6 +50,8 @@ Click the "Run" button.
 Enter your input in the terminal window below the editor.
 
 👉 Try it instantly: Example on OneCompiler
+
+
 
 📓 Option 4: Run in JupyterLab / Google Colab
 If you're using a notebook interface like JupyterLab or Google Colab:
