@@ -58,3 +58,4 @@ from overtime_calculator import overtime
 overtime()
 Run the cell and enter input in the notebook interface.
 
+💡 Got suggestions or improvements? Open a pull request or issue on GitHub!
