@@ -1,3 +1,5 @@
+# 💡 Got suggestions or improvements? Open a pull request or issue on GitHub!
+
 def calculate_overtime():
     scrap_sold = float(input("\nQuota fulfilled: "))
     profit_quota = float(input("Profit quota: "))
