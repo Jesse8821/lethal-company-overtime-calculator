@@ -1,36 +1,61 @@
-import math
+def calculate_overtime():
+    scrap_sold = float(input("\nQuota fulfilled: "))
+    profit_quota = float(input("Profit quota: "))
+    days_until_deadline = int(input("Days until deadline: "))
 
-def overtime():
-    scrap_sold = float(input("\nquota fulfilled: "))
-    profitquota = float(input("profit quota: "))
-    daysuntildeadline = int(input("days until deadline: "))
+    overtime_score = (scrap_sold - profit_quota) / 5 + 15 * days_until_deadline
+    print(f"\n🕒 Overtime score: {overtime_score:.2f}")
 
-    # Overtime berekening
-    overtime_score = math.floor((scrap_sold - profitquota) / 5 + 15 * daysuntildeadline)
-    print("\novertime: ", overtime_score)
 
-def target():
-    gebruik_target = input("\nWil je een target instellen? (ja/nee): ").lower()
+def target_planner():
+    try:
+        target = float(input("\nWhat is your target (credits)? "))
+        already_collected = float(input("How much loot have you already collected? "))
+        days_left = int(input("How many days left in overtime? "))
+        players = int(input("How many players? "))
 
-    if gebruik_target == "ja":
-        target = float(input("Wat is je target (credits)? "))
-        huidige_loot = float(input("Hoeveel credits heb je al ? "))
-        dagen_over = int(input("Hoeveel dagen zijn er tot de deadline? "))
-        aantal_spelers = int(input("Met hoeveel spelers ben je? "))
+        remaining = target - already_collected
+        per_day = remaining / days_left
+        per_day_per_player = per_day / players
 
-        resterend = target - huidige_loot
+        print("\n🎯 Target Planner")
+        print(f"Total target: {target:.2f} credits")
+        print(f"Already collected: {already_collected:.2f} credits")
+        print(f"Days left: {days_left}")
+        print(f"Players: {players}")
+        print(f"\n💰 Needed per day: {per_day:.2f} credits")
+        print(f"👤 Per person per day: {per_day_per_player:.2f} credits")
 
-        if resterend <= 0:
-            print(f"\n🎉 Je hebt je target van {target} credits al gehaald!")
+    except ZeroDivisionError:
+        print("⚠️ Error: Days left and players must be greater than 0.")
+    except ValueError:
+        print("⚠️ Error: Invalid input. Please enter numbers.")
+
+
+def show_menu():
+    while True:
+        print("\n==== Lethal Company Overtime Calculator ====")
+        print("1. Calculate Overtime")
+        print("2. Use Target Planner")
+        print("3. Do Both")
+        print("4. Exit")
+
+        choice = input("\nChoose an option (1-4): ")
+
+        if choice == "1":
+            calculate_overtime()
+        elif choice == "2":
+            target_planner()
+        elif choice == "3":
+            calculate_overtime()
+            target_planner()
+        elif choice == "4":
+            print("Good luck out there, employee 👋")
+            break
         else:
-            per_dag = resterend / dagen_over
-            per_speler = per_dag / aantal_spelers
-            print(f"\n🎯 Target: {target} credits")
-            print(f"📦 Je hebt al: {huidige_loot} credits")
-            print(f"📅 Dagen over: {dagen_over}")
-            print(f"👥 Spelers: {aantal_spelers}")
-            print(f"💰 Nodig per dag: {per_dag:.2f} credits")
-            print(f"👤 Per persoon per dag: {per_speler:.2f} credits")
+            print("❌ Invalid choice. Please enter 1, 2, 3 or 4.")
 
 
-overtime()
+# Run the menu
+if __name__ == "__main__":
+    show_menu()
