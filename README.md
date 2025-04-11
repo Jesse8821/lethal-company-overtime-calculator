@@ -1,69 +1,60 @@
-# Overtime Calculator
+# 🕒 Lethal Company Overtime Calculator
 
-This is a simple Python script to calculate overtime based on sales performance and deadlines.
+A simple but powerful Python tool to calculate your **overtime score** in *Lethal Company*, with an extra feature to **plan your loot target** during overtime!
 
-## 💡 What It Does
+---
 
-The script takes three inputs from the user:
+## 💡 What Does This Script Do?
 
-- `quotafulfilled`: The amount of scrap sold (as a float).
-- `profitquota`: The expected profit quota (as a float).
-- `days until deadline`: The number of days left until the deadline (as an integer).
+The script asks for three standard inputs:
 
-It then calculates the overtime value
+- `quota fulfilled`: The amount of scrap you've sold (float)
+- `profit quota`: The profit you were expected to reach (float)
+- `days until deadline`: The number of days left before the deadline (int)
 
+You also get an optional feature:
 
+🎯 **Want to set a target?** The tool will help you figure out how much loot you need per day and per person to reach it before overtime ends.
+
+---
 
 ## 🚀 How to Run the Script
 
-### ▶️ Option 1: With Python installed
+### ▶️ Option 1: With Python Installed
 
-1. Make sure Python is installed on your computer.
-2. Open a terminal (or command prompt).
-3. Navigate to the folder where your script is located.
+1. Make sure Python is installed on your computer  
+2. Open a terminal or command prompt  
+3. Navigate to the folder where `overtime_calculator.py` is located  
 4. Run:
 
 python overtime_calculator.py
-
-
-
 🧠 Option 2: Run in PyCharm
-Open PyCharm.
+Open PyCharm
 
-Create a new project or open an existing one.
+Create a new project or open an existing one
 
-Right-click in the project panel and choose New > Python File, name it overtime_calculator.
+Right-click the project panel > New > Python File > name it overtime_calculator
 
-Paste in the code from the script.
+Paste the script into the file
 
-Click the green ▶️ "Run" button at the top or right-click on the file and choose "Run".
-
-
+Click the green ▶️ Run button at the top
 
 🌐 Option 3: Run Online with OneCompiler
 Go to OneCompiler Python
 
-Paste the full script into the editor.
+Paste the full script into the editor
 
-Click the "Run" button.
+Click Run
 
-Enter your input in the terminal window below the editor.
+Enter your input in the terminal below
 
-👉 Try it instantly: Example on OneCompiler
+📓 Option 4: Use in JupyterLab / Google Colab
+Paste this into a cell:
 
+python
+Kopiëren
+Bewerken
+from overtime_calculator import overtime
+overtime()
+Run the cell and enter input in the notebook interface.
 
-
-📓 Option 4: Run in JupyterLab / Google Colab
-If you're using a notebook interface like JupyterLab or Google Colab:
-
-Paste the script in a code cell, like this:
-
-scrap_sold = float(input("quotafulfilled: "))
-profitquota = float(input("profitquota: "))
-daysuntildeadline = int(input("days until deadline: "))
-
-overtime = (scrap_sold - profitquota) / 5 + 15 * daysuntildeadline
-print("\novertime:", overtime)
-Run the cell.
-
-Enter input when prompted in the notebook interface.
