@@ -1,18 +1,26 @@
-quota fulfilled: 320
-profit quota: 200
-days until deadline: 2
+==== Lethal Company Overtime Calculator ====
+1. Calculate Overtime
+2. Use Target Planner
+3. Quota Helper
+4. Team Efficiency Tracker
+5. Time vs Profit Analysis
+6. Personal Goal Tracker
+7. Performance Comparison
+8. Daily Target Reminder
+9. Exit
 
-overtime score: 65.00
+Choose an option (1-9): 2
 
-Do you want to set a target? (yes/no): yes
 What is your target (credits)? 1000
 How much loot have you already collected? 200
-How many days left in overtime? 3
+How many days left til deadline? 10
 How many players? 4
 
-🎯 Target: 1000 credits
-📦 Already collected: 200 credits
-📅 Days left: 3
-👥 Players: 4
-💰 Needed per day: 266.67 credits
-👤 Per person per day: 66.67 credits
+🎯 Target Planner
+Total target: 1000.00 credits
+Already collected: 200.00 credits
+Days left: 10
+Players: 4
+
+💰 Needed per day: 80.00 credits
+👤 Per person per day: 20.00 credits
