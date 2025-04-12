@@ -1,3 +1,5 @@
+# 💡 Got suggestions or improvements? Open a pull request or issue on GitHub!
+
 from datetime import datetime, timedelta
 
 
